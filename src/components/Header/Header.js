@@ -26,7 +26,7 @@ const Header = () => {
                         </li>
 
                         <li class="nav-item">
-                            <Link class="nav-link active fw-bold" aria-current="page" to="/blog">Blog</Link>
+                            <Link class="nav-link active fw-bold" aria-current="page" to="/addEvents">Add Events</Link>
                         </li>
 
                         <li class="nav-item">
