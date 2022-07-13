@@ -7,10 +7,12 @@ import Event from '../Event/Event';
 export default function Home() {
   console.log(events);
   return (
-    <>
-      {
-        events.map(event => <Event key={event.id}></Event>)
-      }
-    </>
+    <div className="container">
+      <div className='row'>
+        {
+          events.map(event => <Event key={event.id} event={event}></Event>)
+        }
+      </div>
+    </div>
   )
 }
