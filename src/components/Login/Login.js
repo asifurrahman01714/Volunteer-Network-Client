@@ -50,18 +50,19 @@ const Login = () => {
           });
     }
     return (
-        <div>
-            <h1>This is Login</h1>
-            {
-                user.isSignedIn &&
+
+            <div className="container">
+              <div className="row">
+                <div className="col-4 offset-4 border pb-5 shadow">
                 <div>
-                <img src={user.photo} alt={user.name} />
-                <br />
-                <h2 style={{fontWeight: 'bold'}}>Welcome, {user.name}</h2>
+                  <h2 className="text-center mb-4">Login With</h2>
+                  <button className="btn btn-danger form-control mt-4 mb-3" onClick={handleSignIn}>Google</button>
+                  <h5 className='text-center'>Don't have an account? <a href="#">Click Here</a></h5>
                 </div>
-            }
-            <button onClick={handleSignIn}>Sign In</button>
-        </div>
+                </div>
+              </div>
+            </div>
+        
     );
 };
 

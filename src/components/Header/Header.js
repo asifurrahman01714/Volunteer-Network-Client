@@ -18,10 +18,6 @@ const Header = () => {
                         </li>
                         
                         <li class="nav-item">
-                            <Link class="nav-link active fw-bold" aria-current="page" to="/donation">Donation</Link>
-                        </li>
-
-                        <li class="nav-item">
                             <Link class="nav-link active fw-bold" aria-current="page" to="/events">Events</Link>
                         </li>
 
@@ -35,7 +31,7 @@ const Header = () => {
 
                         <li class="nav-item">
                         <div className="btn btn-primary">
-                            <Link class="nav-link active fw-bold text-white pt-0" aria-current="page" to="/login">Register</Link>
+                            <Link class="nav-link active fw-bold text-white pt-0" aria-current="page" to="/login">Login</Link>
                         </div>
                             
                         </li>
