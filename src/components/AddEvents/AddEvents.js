@@ -18,6 +18,21 @@ export default function AddEvents() {
     .then((data) => console.log(data));
   };
 
+  const handleImageUpload = (event) => {
+    const image = event.target.files[0];
+    const imageData = new FormData();
+    imageData.set('key', '7a25983285d44895114b5725f04305d7');
+    imageData.append('image', image);
+    fetch('https://api.imgbb.com/1/upload', {
+      method: 'POST',
+      body: imageData,
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }
   return (
     <>
         <div className="container">
@@ -27,6 +42,7 @@ export default function AddEvents() {
                         <h5 className="text-center text-primary mb-3">Add Your Favorite Event</h5>
                         <input value={loggedInUser.name} {...register("Name")} className="form-control"/> <br />
                         <input placeholder="Enter Your Event Name" {...register("Event Name", { required: true })} className="form-control"/> <br />
+                        <input placeholder="Upload Event Image" {...register("Image", { required: true })} className="form-control" onChange={handleImageUpload} type="file"/> <br />
                         {errors.exampleRequired && <span>This field is required</span>}
                         
                         <input type="submit" className="form-control"/>
