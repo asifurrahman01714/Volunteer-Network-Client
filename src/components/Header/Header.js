@@ -18,11 +18,23 @@ const Header = () => {
                         </li>
                         
                         <li class="nav-item">
+                            <Link class="nav-link active fw-bold" aria-current="page" to="/donation">Donation</Link>
+                        </li>
+
+                        <li class="nav-item">
+                            <Link class="nav-link active fw-bold" aria-current="page" to="/events">Events</Link>
+                        </li>
+
+                        <li class="nav-item">
+                            <Link class="nav-link active fw-bold" aria-current="page" to="/blog">Blog</Link>
+                        </li>
+
+                        <li class="nav-item">
                             <Link class="nav-link active fw-bold" aria-current="page" to="/dashboard">Dashboard</Link>
                         </li>
 
                         <li class="nav-item">
-                            <Link class="nav-link active fw-bold" aria-current="page" to="/login">Login</Link>
+                            <Link class="nav-link active fw-bold" aria-current="page" to="/login"><div className="btn btn-primary">Register</div></Link>
                         </li>
                     </ul>
                     </div>
