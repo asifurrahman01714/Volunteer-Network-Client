@@ -55,7 +55,7 @@ const Login = () => {
               <div className="row">
                 <div className="col-4 offset-4 border pb-5 shadow">
                 <div>
-                  <h2 className="text-center mb-4">Login With</h2>
+                  <h2 className="text-center mb-4 pt-3">Login With</h2>
                   <button className="btn btn-danger form-control mt-4 mb-3" onClick={handleSignIn}>Google</button>
                   <h5 className='text-center'>Don't have an account? <a href="#">Click Here</a></h5>
                 </div>
