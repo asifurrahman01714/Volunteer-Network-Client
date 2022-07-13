@@ -3,8 +3,8 @@ import firebase from "firebase/app";
 import { initializeApp } from 'firebase/app';
 import firebaseConfig from './firebaseConfig';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from'firebase/auth';
-import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
+import { UserContext } from '../../App';
 
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -39,6 +39,7 @@ const Login = () => {
             history.replace(from);
         })
     };
+    // Firebase Auth Token
     const storeAuthToken = () =>{
         auth.currentUser.getIdToken(true)
         .then(function(idToken) {
