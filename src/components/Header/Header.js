@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import logo from './../../logos/Group-1329.png'
 const Header = () => {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5 pt-2 pb-2">
                 <div class="container-fluid">
                     <a class="" href="#">
                         <img className='w-25' src={logo}  alt="" />
@@ -34,7 +34,10 @@ const Header = () => {
                         </li>
 
                         <li class="nav-item">
-                            <Link class="nav-link active fw-bold" aria-current="page" to="/login"><div className="btn btn-primary">Register</div></Link>
+                        <div className="btn btn-primary">
+                            <Link class="nav-link active fw-bold text-white pt-0" aria-current="page" to="/login">Register</Link>
+                        </div>
+                            
                         </li>
                     </ul>
                     </div>
