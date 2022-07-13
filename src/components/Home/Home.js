@@ -15,7 +15,13 @@ export default function Home() {
     },
     })
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        if (data) {
+          console.log(data)
+        } else {
+          console.log("No data submitted")
+        }
+      });
   }
 
 
@@ -25,7 +31,7 @@ export default function Home() {
         {
           events.map(event => <Event key={event.id} event={event}></Event>)
         }
-        <button const={handleEvents}>Post All Events</button>
+        <button onClick={handleEvents}>Post All Events</button>
       </div>
     </div>
   )
