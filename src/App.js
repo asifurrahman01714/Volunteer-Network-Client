@@ -9,11 +9,15 @@ import {
 import Header from './components/Header/Header';
 import Dashboard from './components/Dashboard/Dashboard';
 import Login from './components/Login/Login';
+import { createContext, useState } from 'react';
+
+export const UserContext = createContext({});
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({})
 
   return (
-    <div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Header/>
         <Switch>
@@ -31,7 +35,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </UserContext.Provider>
   );
 }
 
