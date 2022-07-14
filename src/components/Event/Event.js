@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom'
 
 export default function Event({event}) {
   const handleDelete =(id) =>{
-    console.log(id)
+    console.log(id);
+    fetch(`http://localhost:5000/deleteEvent/${id}`, {
+      method: 'DELETE',
+    });
   }
   return (
     <div className="col-md-4 mb-2 ">
