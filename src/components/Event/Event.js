@@ -6,7 +6,14 @@ export default function Event({event}) {
     console.log(id);
     fetch(`http://localhost:5000/deleteEvent/${id}`, {
       method: 'DELETE',
-    });
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data) {
+        alert(' Event has been deleted successfully');
+        window.location.reload();
+      }
+    })
   }
   return (
     <div className="col-md-4 mb-2 ">
